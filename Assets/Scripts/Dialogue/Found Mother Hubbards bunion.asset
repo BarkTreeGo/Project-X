@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff2bf0146b8d8c54597bbbb8e6a72732, type: 3}
+  m_Name: Found Mother Hubbards bunion
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 2161781921844509247}
+  newNodeOffset: {x: 250, y: 0}
+--- !u!114 &2161781921844509247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29be0b975b39e98428d68d3b0de0cfba, type: 3}
+  m_Name: dbbc9e13-f965-491b-8e17-b1dc3e23ef80
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  text: So you want a bunion then? Alright here take it.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 10
+    y: 115
+    width: 200
+    height: 100
+  onEnterAction: 
+  onExitAction: Found Bunion
