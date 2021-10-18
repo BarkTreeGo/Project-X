@@ -242,7 +242,7 @@ namespace StarterAssets
 				}
 
 				// stop our velocity dropping infinitely when grounded
-				if (_verticalVelocity < 0.0f)
+				if (_verticalVelocity < Mathf.Epsilon) //0.0f
 				{
 					_verticalVelocity = -2f;
 				}

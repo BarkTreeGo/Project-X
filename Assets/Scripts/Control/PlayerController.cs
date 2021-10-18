@@ -52,7 +52,7 @@ namespace RPG.Control
             UseAbilities();
 
             if (InteractWithComponent()) { return; }            
-            if (InteractWithMovement()) { return; }
+            //if (InteractWithMovement()) { return; }
             SetCursor(CursorType.None);
         }       
 
