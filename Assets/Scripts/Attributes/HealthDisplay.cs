@@ -20,8 +20,7 @@ namespace RPG.Attributes
         private void Update()
         {
             //using a String formater which indicates by the :0.0 to use 0 decimal places
-            GetComponent<Text>().text = String.Format("{0:0}/{1:0}", health.GethealthPoints(), health.GetMaxhealthPoints());
-            Debug.Log("healthpoints = " + health.GethealthPoints());
+            GetComponent<Text>().text = String.Format("{0:0}/{1:0}", health.GethealthPoints(), health.GetMaxhealthPoints());            
         }
     }
 }

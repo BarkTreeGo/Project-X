@@ -59,6 +59,9 @@ namespace StarterAssets
 		[Tooltip("For locking the camera position on all axis")]
 		public bool LockCameraPosition = false;
 
+		[Tooltip("For identifying the layers to get the mouse position on the surface")]
+		[SerializeField] LayerMask layerMask;
+
 		// cinemachine
 		private float _cinemachineTargetYaw;
 		private float _cinemachineTargetPitch;
@@ -115,17 +118,42 @@ namespace StarterAssets
 
 		private void Update()
 		{
+			Debug.Log("Mouse position hit = " + GetMousePostion());
+			Debug.Log("Angle between mouse and player = " + CursorFacing());
 			_hasAnimator = TryGetComponent(out _animator);
 			
 			JumpAndGravity();
 			GroundedCheck();
 			Move();
+			
 		}
 
 		private void LateUpdate()
 		{
 			CameraRotation();
 		}
+
+		private Ray GetMouseRay()
+		{
+			return Camera.main.ScreenPointToRay(Input.mousePosition);
+		}
+
+		private Vector3 GetMousePostion()
+        {			
+			RaycastHit raycastHit;
+			if (Physics.Raycast(GetMouseRay(), out raycastHit, 1000, layerMask))
+			{				
+				return raycastHit.point;
+			}			
+			return transform.position;
+		}
+
+		private bool CursorFacing()
+        {			
+			float angle = Vector3.Angle(transform.forward, GetMousePostion()); 
+			return angle < 90f;
+
+        }
 
 		private void AssignAnimationIDs()
 		{
